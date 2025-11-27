@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 import vasileyeNaglieh.Kashti;
 import vasileyeNaglieh.VasileyeNaglieh;
 
+ 
 public class KashtiTest {
     @Test
     void super_keyword() {
@@ -18,6 +19,13 @@ public class KashtiTest {
 
         kashti.printRefrence();
 
-
     }
+  
+    @Test
+    void protected_Method() {
+        Kashti kashti = new Kashti();
+
+        kashti.ayaDarHalHarekatAst();
+    }
+
 }
