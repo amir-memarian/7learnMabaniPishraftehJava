@@ -1,8 +1,11 @@
+package calculator;
+
 import javax.swing.*;
 
 public class CalculatorUI {
 
     private static JTextField result;
+    private static String adadAval;
 
     public static void main(String[] args) {
         JFrame mashinHesab = new JFrame("Mashin Hesab");
@@ -12,10 +15,7 @@ public class CalculatorUI {
         result.setBounds(0,0,150,50);
         result.setEditable(false);
 
-        JButton cancle = new JButton("C");
-        cancle.setBounds(150,0,50,50);
-        cancle.addActionListener(event -> result.setText(""));
-
+        JButton cancle = getJButton("C", 150, 0);
         JButton one = getJButton("1", 0, 50);
         JButton two = getJButton("2", 50, 50);
         JButton three = getJButton("3", 100, 50);
@@ -63,7 +63,24 @@ public class CalculatorUI {
     private static JButton getJButton(String lable, int xPosition, int yPosition) {
         JButton button = new JButton(lable);
         button.setBounds(xPosition, yPosition, 50, 50);
-        button.addActionListener(event -> result.setText(result.getText() + button.getText()));
+        if(lable.equals("C")){
+            button.addActionListener(event -> result.setText(""));
+
+        }else if(lable.equals("+")) {
+            button.addActionListener(event -> {
+                adadAval = result.getText();
+                result.setText("");
+
+            });
+        }else if(lable.equals("=")) {
+            Calculator calculator = new Calculator();
+            String total = calculator.add(adadAval,result.getText());
+            result.setText(total);
+
+        }else{
+            button.addActionListener(event -> result.setText(result.getText() + button.getText()));
+        }
         return button;
     }
+
 }
