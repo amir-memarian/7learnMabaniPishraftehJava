@@ -8,7 +8,7 @@ public abstract class VasileyeNaglieh {
         return ayaRoshanAst;
     }
 
-    protected void protectedMethod(){
+    protected final void protectedMethod(){
         System.out.println("this method is Protected.");
     }
 
