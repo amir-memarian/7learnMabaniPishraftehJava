@@ -1,7 +1,16 @@
 package vasileyeNaglieh;
 
 public abstract class VasileyeNaglieh {
-    boolean ayaRoshanAst;
+
+    private boolean ayaRoshanAst;
+
+    public boolean ayaRoshanAst() {
+        return ayaRoshanAst;
+    }
+
+    protected void protectedMethod(){
+        System.out.println("this method is Protected.");
+    }
 
     public void roshan(){
         ayaRoshanAst = true;

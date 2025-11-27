@@ -1,4 +1,4 @@
-import vasileyeNaglieh.VasileyeNaglieh;
+package vasileyeNaglieh;
 
 public class Kashti extends VasileyeNaglieh {
     @Override
@@ -8,6 +8,6 @@ public class Kashti extends VasileyeNaglieh {
 
     @Override
     public String getMark() {
-        return "Kashti";
+        return "vasileyeNaglieh.Kashti";
     }
 }

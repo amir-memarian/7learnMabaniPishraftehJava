@@ -3,11 +3,11 @@ package vasileyeNaglieh;
 public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox{ // DRY Dont Repeat Yourself
 
     // Data:
-    boolean ayaDarBazAst;
+    private boolean ayaDarBazAst;
     private String mark;
-    int gonjayeshSandog;
-    String noeDande;
-    Ranande ranande;
+    private int gonjayeshSandog;
+    private String noeDande;
+    private Ranande ranande;
 
     public Mashin(String mark, int gonjayeshSandog, String noeDande){
         this.mark = mark;
@@ -30,8 +30,9 @@ public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox{ // D
     }
 
     public boolean ayaDarHalHarekatAst(){
+        protectedMethod();
         // harekat : dar baste bashad va mashine roshan bashad (rule)
-        if (!ayaDarBazAst && ayaRoshanAst){
+        if (!ayaDarBazAst && ayaRoshanAst()){
             return true;
         }else{
             return false;

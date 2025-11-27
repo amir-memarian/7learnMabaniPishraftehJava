@@ -18,6 +18,6 @@ public class NameVasileyeNagliehChapKonTest {
         String listNameVasileyeNaglieh = nameVasileyeNagliehChapKon.execute();
 
         //then
-        Assertions.assertEquals("Benz-Volvo-Motor-Kashti",listNameVasileyeNaglieh);
+        Assertions.assertEquals("Benz-Volvo-Motor-vasileyeNaglieh.Kashti",listNameVasileyeNaglieh);
     }
 }

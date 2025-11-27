@@ -3,7 +3,7 @@ package vasileyeNaglieh;
 public class Motor extends VasileyeNaglieh {
 
     public boolean ayaDarHalHarekatAst() {
-        return ayaRoshanAst;
+        return isAyaRoshanAst();
     }
 
     public String getMark() {
