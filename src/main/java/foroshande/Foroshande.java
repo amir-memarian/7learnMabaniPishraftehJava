@@ -3,8 +3,15 @@ package foroshande;
 import vasileyeNaglieh.Mashin;
 
 public class Foroshande {
-    public void foroshMashin() {
 
+    public static String[] nameForoshandegan = new String[10];
+
+    static {
+        nameForoshandegan[0] = "ali";
+        nameForoshandegan[1] = "amir";
+    }
+
+    public void foroshMashin() {
         //Mashin mashin = new Mashin();
         //System.out.println("Object in Foroshande Class : " + mashin);
         //mashin.tedadForosh++ ;
