@@ -1,6 +1,13 @@
 package vasileyeNaglieh;
 
 public class Kashti extends VasileyeNaglieh {
+
+    @Override
+    public String toString() {
+        //return "Kashti{}";
+        return super.toString();
+    }
+
     @Override
     public boolean ayaDarHalHarekatAst() {
         return false;
