@@ -1,16 +1,6 @@
 package vasileyeNaglieh;
 
-public class Motor {
-
-    boolean ayaRoshanAst;
-
-    public void roshan(){
-        ayaRoshanAst = true;
-    }
-
-    public void khamosh(){
-        ayaRoshanAst = false;
-    }
+public class Motor extends VasileyeNaglieh {
 
     public boolean ayaDarHalHarekatAst() {
         return ayaRoshanAst;
