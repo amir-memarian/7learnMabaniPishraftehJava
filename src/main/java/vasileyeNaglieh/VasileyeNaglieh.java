@@ -4,6 +4,10 @@ public abstract class VasileyeNaglieh {
 
     private boolean ayaRoshanAst;
 
+    public String toString(){
+        return "Khodro{}";
+    }
+
     public boolean ayaRoshanAst() {
         return ayaRoshanAst;
     }

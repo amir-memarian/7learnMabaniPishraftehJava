@@ -11,4 +11,13 @@ public class KashtiTest {
         System.out.println(kashti01.toString());
         System.out.println(kashti02.toString());
     }
+
+    @Test
+    void this_keyword() {
+        Kashti kashti = new Kashti();
+
+        kashti.printRefrence();
+
+
+    }
 }

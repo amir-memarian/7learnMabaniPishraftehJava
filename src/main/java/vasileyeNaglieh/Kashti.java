@@ -17,4 +17,8 @@ public class Kashti extends VasileyeNaglieh {
     public String getMark() {
         return "vasileyeNaglieh.Kashti";
     }
+
+    public void printRefrence() {
+        System.out.println(this);
+    }
 }
