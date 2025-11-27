@@ -1,6 +1,8 @@
 import vasileyeNaglieh.Mashin;
+import vasileyeNaglieh.VasileyeNaglieh;
 import vasileyeNaglieh.Ranande;
 import org.junit.jupiter.api.Test;
+import vasileyeNaglieh.VasileyeNaglieh;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

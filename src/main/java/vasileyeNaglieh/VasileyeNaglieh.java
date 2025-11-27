@@ -1,6 +1,6 @@
 package vasileyeNaglieh;
 
-public class VasileyeNaglieh {
+public abstract class VasileyeNaglieh {
     boolean ayaRoshanAst;
 
     public void roshan(){
@@ -10,5 +10,7 @@ public class VasileyeNaglieh {
     public void khamosh(){
         ayaRoshanAst = false;
     }
+
+    public abstract boolean ayaDarHalHarekatAst();
 
 }
