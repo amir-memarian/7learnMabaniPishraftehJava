@@ -4,6 +4,10 @@ import javax.swing.*;
 
 public class CalculatorUI {
 
+    public static final int WIDTH = 50;
+    public static final int HEIGHT = 50;
+
+
     private static JTextField result;
     private static String adadAval;
 
@@ -12,26 +16,26 @@ public class CalculatorUI {
 
         //JTextField result = new JTextField();
         result = new JTextField();
-        result.setBounds(0,0,150,50);
+        result.setBounds(0,0,WIDTH*3,HEIGHT);
         result.setEditable(false);
 
-        JButton cancle = getJButton("C", 150, 0);
-        JButton one = getJButton("1", 0, 50);
-        JButton two = getJButton("2", 50, 50);
-        JButton three = getJButton("3", 100, 50);
-        JButton plus = getJButton("+", 150, 50);
-        JButton four = getJButton("4", 0, 100);
-        JButton five = getJButton("5", 50, 100);
-        JButton six = getJButton("6", 100, 100);
-        JButton minus = getJButton("-", 150, 100);
-        JButton seven = getJButton("7", 0, 150);
-        JButton eight = getJButton("8", 50, 150);
-        JButton nine = getJButton("9", 100, 150);
-        JButton multiply = getJButton("*", 150, 150);
-        JButton point = getJButton(".", 0, 200);
-        JButton zero = getJButton("0", 50, 200);
-        JButton equal = getJButton("=", 100, 200);
-        JButton division = getJButton("/", 150, 200);
+        JButton cancle = getJButton("C", WIDTH*3, 0);
+        JButton one = getJButton("1", 0, HEIGHT);
+        JButton two = getJButton("2", WIDTH, HEIGHT);
+        JButton three = getJButton("3", WIDTH*2, HEIGHT);
+        JButton plus = getJButton("+", WIDTH*3, HEIGHT);
+        JButton four = getJButton("4", 0, HEIGHT*2);
+        JButton five = getJButton("5", WIDTH, HEIGHT*2);
+        JButton six = getJButton("6", WIDTH*2, HEIGHT*2);
+        JButton minus = getJButton("-", WIDTH*3, HEIGHT*2);
+        JButton seven = getJButton("7", 0, HEIGHT*3);
+        JButton eight = getJButton("8", WIDTH, HEIGHT*3);
+        JButton nine = getJButton("9", WIDTH*2, HEIGHT*3);
+        JButton multiply = getJButton("*", WIDTH*3, HEIGHT*3);
+        JButton point = getJButton(".", 0, HEIGHT*4);
+        JButton zero = getJButton("0", WIDTH, HEIGHT*4);
+        JButton equal = getJButton("=", WIDTH*2, HEIGHT*4);
+        JButton division = getJButton("/", WIDTH*3, HEIGHT*4);
 
         mashinHesab.add(result);
         mashinHesab.add(cancle);
@@ -62,7 +66,7 @@ public class CalculatorUI {
 
     private static JButton getJButton(String lable, int xPosition, int yPosition) {
         JButton button = new JButton(lable);
-        button.setBounds(xPosition, yPosition, 50, 50);
+        button.setBounds(xPosition, yPosition, WIDTH, HEIGHT);
         if(lable.equals("C")){
             button.addActionListener(event -> result.setText(""));
 
@@ -73,7 +77,7 @@ public class CalculatorUI {
 
             });
         }else if(lable.equals("=")) {
-            Calculator calculator = new Calculator();
+            final Calculator calculator = new Calculator();
             String total = calculator.add(adadAval,result.getText());
             result.setText(total);
 
