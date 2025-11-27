@@ -1,13 +1,20 @@
 package vasileyeNaglieh;
 
-public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox{ // DRY Dont Repeat Yourself
+public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox{
 
+    public static int tedadForosh;
+
+    // DRY Dont Repeat Yourself
     // Data:
     private boolean ayaDarBazAst;
     private String mark;
     private int gonjayeshSandog;
     private String noeDande;
     private Ranande ranande;
+
+    public Mashin(){
+
+    }
 
     public Mashin(String mark, int gonjayeshSandog, String noeDande){
         this.mark = mark;
