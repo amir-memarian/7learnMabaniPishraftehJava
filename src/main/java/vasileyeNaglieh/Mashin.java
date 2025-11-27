@@ -1,6 +1,6 @@
 package vasileyeNaglieh;
 
-public class Mashin extends VasileyeNaglieh{ // DRY Dont Repeat Yourself
+public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox{ // DRY Dont Repeat Yourself
 
     // Data:
     boolean ayaDarBazAst;
@@ -29,5 +29,15 @@ public class Mashin extends VasileyeNaglieh{ // DRY Dont Repeat Yourself
         }else{
             return false;
         }
+    }
+
+    @Override
+    public String typeDande() {
+        return "Automatic";
+    }
+
+    @Override
+    public int gonjayeshSandogh() {
+        return 100;
     }
 }
