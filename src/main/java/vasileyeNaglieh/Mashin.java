@@ -4,14 +4,21 @@ public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox{ // D
 
     // Data:
     boolean ayaDarBazAst;
-    String mark;
+    private String mark;
+    int gonjayeshSandog;
+    String noeDande;
     Ranande ranande;
 
-
-    public Mashin(String mark){
+    public Mashin(String mark, int gonjayeshSandog, String noeDande){
         this.mark = mark;
+        this.gonjayeshSandog = gonjayeshSandog;
+        this.noeDande = noeDande;
     }
 
+    @Override
+    public String getMark() {
+        return mark;
+    }
 
     // Method:
     public void bazKardanDar(){

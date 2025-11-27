@@ -13,4 +13,5 @@ public abstract class VasileyeNaglieh {
 
     public abstract boolean ayaDarHalHarekatAst();
 
+    public abstract String getMark();
 }

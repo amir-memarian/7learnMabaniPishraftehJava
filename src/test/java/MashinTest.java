@@ -1,8 +1,6 @@
 import vasileyeNaglieh.Mashin;
-import vasileyeNaglieh.VasileyeNaglieh;
 import vasileyeNaglieh.Ranande;
 import org.junit.jupiter.api.Test;
-import vasileyeNaglieh.VasileyeNaglieh;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -11,7 +9,7 @@ public class MashinTest {
     @Test
     void mashin_bayad_harekat_konad_agar_darBastehBashad_va_RoshanBashad() {
         // Given
-        Mashin benz = new Mashin("Benz");
+        Mashin benz = new Mashin("Benz", 120, "Benz");
         Ranande ranande = new Ranande();
 
         // When
