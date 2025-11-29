@@ -30,4 +30,8 @@ public class Kashti extends VasileyeNaglieh {
     public void printRefrence() {
         System.out.println(this);
     }
+
+    public void printRefrenceObject(Object object){
+        System.out.println(object);
+    }
 }

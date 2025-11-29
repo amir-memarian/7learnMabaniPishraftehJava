@@ -5,7 +5,7 @@ public abstract class VasileyeNaglieh {
     private boolean ayaRoshanAst;
 
     public String toString(){
-        return "Khodro{}";
+        return "VasileyeNaglieh{}";
     }
 
     public boolean ayaRoshanAst() {

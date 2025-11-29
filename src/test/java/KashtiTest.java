@@ -18,6 +18,9 @@ public class KashtiTest {
         Kashti kashti = new Kashti();
 
         kashti.printRefrence();
+        kashti.printRefrenceObject(kashti);
+
+        kashti.printRefrenceObject(this);
 
     }
   
