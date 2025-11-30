@@ -4,6 +4,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import vasileyeNaglieh.mashin.Dande;
 import vasileyeNaglieh.mashin.Mashin;
+import vasileyeNaglieh.mashin.MashinCamparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,6 +41,31 @@ public class CompareMashinTest {
         expectedMashins.add(new Mashin("BMW",50, Dande.MANUAL));
         expectedMashins.add(new Mashin("BMW",100, Dande.AUTOMATIC));
         expectedMashins.add(new Mashin("BMW",150, Dande.MANUAL));
+
+
+        Assertions.assertThat(mashins).isEqualTo(expectedMashins);
+
+    }
+
+    @Test
+    void Should_Sort_Mashins_by_mark() {
+        Mashin bmw = new Mashin("BMW",150, Dande.MANUAL);
+        Mashin mercedes = new Mashin("Mercedes",100, Dande.AUTOMATIC);
+        Mashin pride = new Mashin("Pride",50, Dande.MANUAL);
+        Mashin alfaRomeo = new Mashin("Alfa romeo",50, Dande.AUTOMATIC);
+        List<Mashin> mashins = new ArrayList<>();
+        mashins.add(bmw);
+        mashins.add(mercedes);
+        mashins.add(pride);
+        mashins.add(alfaRomeo);
+
+        Collections.sort(mashins, new MashinCamparator());
+
+        List<Mashin> expectedMashins = new ArrayList<>();
+        expectedMashins.add(alfaRomeo);
+        expectedMashins.add(bmw);
+        expectedMashins.add(mercedes);
+        expectedMashins.add(pride);
 
 
         Assertions.assertThat(mashins).isEqualTo(expectedMashins);
