@@ -1,4 +1,5 @@
-import vasileyeNaglieh.Mashin;
+import vasileyeNaglieh.mashin.Dande;
+import vasileyeNaglieh.mashin.Mashin;
 
 import java.util.Scanner;
 
@@ -9,8 +10,8 @@ public class Main {
         for (int index = 0; index < args.length; index++) {
             System.out.println(args[index]);
         }
-        Mashin mashin = new Mashin(args[0],Integer.parseInt(args[1]),args[2]);
-        System.out.println("noe mashin : " + mashin.getMark());
+        Mashin mashin = new Mashin(args[0],Integer.parseInt(args[1]), Dande.valueOf(args[2]));
+        System.out.println("mashin : " + mashin.getMark());
 
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();

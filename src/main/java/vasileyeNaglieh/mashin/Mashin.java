@@ -1,6 +1,11 @@
-package vasileyeNaglieh;
+package vasileyeNaglieh.mashin;
 
-public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox{
+import vasileyeNaglieh.GearBox;
+import vasileyeNaglieh.Ranande;
+import vasileyeNaglieh.SandoghDar;
+import vasileyeNaglieh.VasileyeNaglieh;
+
+public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox {
 
     public static int tedadForosh;
 
@@ -9,14 +14,14 @@ public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox{
     private boolean ayaDarBazAst;
     private String mark;
     private int gonjayeshSandog;
-    private String noeDande;
+    private Dande noeDande;
     private Ranande ranande;
 
     public Mashin(){
 
     }
 
-    public Mashin(String mark, int gonjayeshSandog, String noeDande){
+    public Mashin(String mark, int gonjayeshSandog, Dande noeDande){
         this.mark = mark;
         this.gonjayeshSandog = gonjayeshSandog;
         this.noeDande = noeDande;
@@ -47,12 +52,22 @@ public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox{
     }
 
     @Override
-    public String typeDande() {
-        return "Automatic";
+    public Dande typeDande() {
+        return noeDande;
     }
 
     @Override
     public int gonjayeshSandogh() {
         return 100;
+    }
+
+    public String toString(){
+        return "Mashin{"+
+                "ayaDarBazAst :: " + this.ayaDarBazAst +
+                ", mark :: '" + this.mark + "'" +
+                ", gojayeshSandogh :: " + this.gonjayeshSandog +
+                ", noeDande :: '" + this.noeDande + " - " + this.noeDande.getToPersion() + "'" +
+                ", ranade :: " + this.ranande +
+                "}";
     }
 }

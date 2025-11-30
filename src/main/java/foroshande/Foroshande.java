@@ -1,6 +1,6 @@
 package foroshande;
 
-import vasileyeNaglieh.Mashin;
+import vasileyeNaglieh.mashin.Mashin;
 
 public class Foroshande {
 

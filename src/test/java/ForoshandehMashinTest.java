@@ -1,7 +1,7 @@
 import foroshande.Foroshande;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import vasileyeNaglieh.Mashin;
+import vasileyeNaglieh.mashin.Mashin;
 
 public class ForoshandehMashinTest {
     @Test
