@@ -5,6 +5,8 @@ import vasileyeNaglieh.Ranande;
 import vasileyeNaglieh.SandoghDar;
 import vasileyeNaglieh.VasileyeNaglieh;
 
+import java.util.Objects;
+
 public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox {
 
     public static int tedadForosh;
@@ -69,5 +71,17 @@ public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox {
                 ", noeDande :: '" + this.noeDande + " - " + this.noeDande.getToPersion() + "'" +
                 ", ranade :: " + this.ranande +
                 "}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Mashin mashin = (Mashin) o;
+        return gonjayeshSandog == mashin.gonjayeshSandog && Objects.equals(mark, mashin.mark) && noeDande == mashin.noeDande;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(mark, gonjayeshSandog, noeDande);
     }
 }
