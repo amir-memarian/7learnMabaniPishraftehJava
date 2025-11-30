@@ -1,6 +1,7 @@
+package vasileyeNaglieh;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import vasileyeNaglieh.*;
 import vasileyeNaglieh.mashin.Dande;
 import vasileyeNaglieh.mashin.Mashin;
 

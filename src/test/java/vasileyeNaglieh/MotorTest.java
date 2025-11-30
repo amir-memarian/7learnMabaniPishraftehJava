@@ -1,6 +1,6 @@
-import vasileyeNaglieh.Motor;
+package vasileyeNaglieh;
+
 import org.junit.jupiter.api.Test;
-import vasileyeNaglieh.VasileyeNaglieh;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
