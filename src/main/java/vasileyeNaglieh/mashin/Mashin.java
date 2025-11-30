@@ -7,7 +7,7 @@ import vasileyeNaglieh.VasileyeNaglieh;
 
 import java.util.Objects;
 
-public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox {
+public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox, Comparable<Mashin> {
 
     public static int tedadForosh;
 
@@ -83,5 +83,18 @@ public class Mashin extends VasileyeNaglieh implements SandoghDar, GearBox {
     @Override
     public int hashCode() {
         return Objects.hash(mark, gonjayeshSandog, noeDande);
+    }
+
+    @Override
+    public int compareTo(Mashin mashinDigar) {
+        int compareGonjayeshSandog = Integer.compare(this.gonjayeshSandog,mashinDigar.gonjayeshSandog);
+        if (compareGonjayeshSandog == 0) { // barabar bodan gonjayeshSandog
+            if(Objects.equals(this.noeDande,Dande.MANUAL)){
+                return 1;
+            }else{
+                return -1;
+            }
+        }
+        return Integer.compare(this.gonjayeshSandog,mashinDigar.gonjayeshSandog);
     }
 }

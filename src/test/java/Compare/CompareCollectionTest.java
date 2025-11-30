@@ -33,4 +33,5 @@ public class CompareCollectionTest {
         Assertions.assertThat(mashinha_1.equals(mashinha_2)).isTrue();
         Assertions.assertThat(mashinha_1.hashCode()==mashinha_2.hashCode()).isTrue();
     }
+
 }
