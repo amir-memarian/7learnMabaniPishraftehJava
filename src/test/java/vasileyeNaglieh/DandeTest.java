@@ -1,3 +1,5 @@
+package vasileyeNaglieh;
+
 import org.junit.jupiter.api.Test;
 import vasileyeNaglieh.mashin.Dande;
 

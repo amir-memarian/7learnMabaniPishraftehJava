@@ -1,8 +1,8 @@
-import org.junit.jupiter.api.Test;
-import vasileyeNaglieh.Kashti;
-import vasileyeNaglieh.VasileyeNaglieh;
+package vasileyeNaglieh;
 
- 
+import org.junit.jupiter.api.Test;
+
+
 public class KashtiTest {
     @Test
     void super_keyword() {

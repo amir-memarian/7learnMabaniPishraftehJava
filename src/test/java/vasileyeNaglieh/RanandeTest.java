@@ -1,5 +1,6 @@
+package vasileyeNaglieh;
+
 import org.junit.jupiter.api.Test;
-import vasileyeNaglieh.Ranande;
 
 public class RanandeTest {
     @Test
