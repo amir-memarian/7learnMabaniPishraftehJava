@@ -3,12 +3,9 @@ package collection.list;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
-public class ArrayListTest {
+public class ListTest {
     @Test
     void Should_Be_Empty_When_Created() {
         List<String> strings = new ArrayList<>();
@@ -18,8 +15,29 @@ public class ArrayListTest {
     }
 
     @Test
+    void Should_Sort_List() {
+        List<String> animals = new LinkedList<>();
+        animals.add("Dog");
+        animals.add("Cat");
+        animals.add("Cat");
+        animals.add("Cat");
+        animals.add("Rabbit");
+
+        Collections.sort(animals);
+
+        LinkedList<String> sortedAnimals = new LinkedList<>();
+        sortedAnimals.add("Cat");
+        sortedAnimals.add("Cat");
+        sortedAnimals.add("Cat");
+        sortedAnimals.add("Dog");
+        sortedAnimals.add("Rabbit");
+
+        Assertions.assertThat(animals).isEqualTo(sortedAnimals);
+    }
+
+    @Test
     void Should_Be_Immutable() {
-        List<String> animals = new ArrayList<>();
+        List<String> animals = new LinkedList<>();
         animals.add("Dog");
         animals.add("Cat");
         animals.add("Cat");
@@ -37,7 +55,7 @@ public class ArrayListTest {
 
     @Test
     void Should_Reverce_A_List() {
-        List<String> animals = new ArrayList<>();
+        List<String> animals = new LinkedList<>();
         animals.add("Dog");
         animals.add("Cat");
         animals.add("Cat");
@@ -46,7 +64,7 @@ public class ArrayListTest {
 
         Collections.reverse(animals);
 
-        List<String> reversedAnimals = new ArrayList<>();
+        List<String> reversedAnimals = new LinkedList<>();
 
         reversedAnimals.add("Rabbit");
         reversedAnimals.add("Cat");
@@ -75,7 +93,7 @@ public class ArrayListTest {
 
 
         // Then
-        List<Integer> expectedList = new ArrayList<>();
+        List<Integer> expectedList = new LinkedList<>();
         expectedList.add(1);    // index 0
         expectedList.add(66);   // index 1
         expectedList.add(55);   // index 2
@@ -87,7 +105,7 @@ public class ArrayListTest {
 
     private class Converter {
         public List<Integer> convertToArrayList(int[] arrayNumbers) {
-            List<Integer> listNumber = new ArrayList<>();
+            List<Integer> listNumber = new LinkedList<>();
             for (int number : arrayNumbers) {
                 listNumber.add(number);
             }
