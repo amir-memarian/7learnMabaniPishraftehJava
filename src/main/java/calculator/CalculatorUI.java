@@ -16,9 +16,10 @@ public class CalculatorUI {
         JFrame mashinHesab = new JFrame("Mashin Hesab");
         mashinHesab.setLayout(null);
 
-        JTextField result = new JTextField();
+        result = new JTextField();
         result.setBounds(0,0,WIDTH*3,HEIGHT);
-        result.setEditable(false);
+        result.setEditable(true);
+        result.setText("");
 
         JButton cancle = getJButton("C", WIDTH*3, 0);
         JButton one = getJButton("1", 0, HEIGHT);
@@ -67,21 +68,22 @@ public class CalculatorUI {
         button.setBounds(xPosition, yPosition, WIDTH, HEIGHT);
         if(lable.equals("C")){
             button.addActionListener(event -> result.setText(""));
-        }else if(lable.equals("+")) {
+        } else if(lable.equals("+")) {
             button.addActionListener(event -> {
                 adadAval = result.getText();
                 result.setText("");
 
             });
-        }else if(lable.equals("=")) {
+        } else if (lable.equals("=")) {
             button.addActionListener(event -> {
                 final Calculator calculator = new Calculator();
                 String total = calculator.add(adadAval,result.getText());
                 result.setText(total);
             });
 
-        }else{
-            button.addActionListener(event -> result.setText(result.getText() + button.getText()));
+        } else {
+            button.addActionListener(event ->
+                result.setText(result.getText() + button.getText()));
         }
         return button;
     }
