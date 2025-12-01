@@ -1,6 +1,7 @@
 package calculator;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class CalculatorUI {
 
@@ -13,9 +14,9 @@ public class CalculatorUI {
 
     public static void main(String[] args) {
         JFrame mashinHesab = new JFrame("Mashin Hesab");
+        mashinHesab.setLayout(null);
 
-        //JTextField result = new JTextField();
-        result = new JTextField();
+        JTextField result = new JTextField();
         result.setBounds(0,0,WIDTH*3,HEIGHT);
         result.setEditable(false);
 
@@ -37,6 +38,7 @@ public class CalculatorUI {
         JButton equal = getJButton("=", WIDTH*2, HEIGHT*4);
         JButton division = getJButton("/", WIDTH*3, HEIGHT*4);
 
+
         mashinHesab.add(result);
         mashinHesab.add(cancle);
         mashinHesab.add(one);
@@ -56,12 +58,8 @@ public class CalculatorUI {
         mashinHesab.add(equal);
         mashinHesab.add(division);
 
-
         mashinHesab.setSize(600,600);
         mashinHesab.setVisible(true);
-        mashinHesab.setLayout(null);
-
-
     }
 
     private static JButton getJButton(String lable, int xPosition, int yPosition) {
@@ -69,7 +67,6 @@ public class CalculatorUI {
         button.setBounds(xPosition, yPosition, WIDTH, HEIGHT);
         if(lable.equals("C")){
             button.addActionListener(event -> result.setText(""));
-
         }else if(lable.equals("+")) {
             button.addActionListener(event -> {
                 adadAval = result.getText();
@@ -77,9 +74,11 @@ public class CalculatorUI {
 
             });
         }else if(lable.equals("=")) {
-            final Calculator calculator = new Calculator();
-            String total = calculator.add(adadAval,result.getText());
-            result.setText(total);
+            button.addActionListener(event -> {
+                final Calculator calculator = new Calculator();
+                String total = calculator.add(adadAval,result.getText());
+                result.setText(total);
+            });
 
         }else{
             button.addActionListener(event -> result.setText(result.getText() + button.getText()));

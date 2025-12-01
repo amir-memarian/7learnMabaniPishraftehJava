@@ -6,6 +6,7 @@ public class MashinCamparator implements Comparator<Mashin> {
 
     @Override
     public int compare(Mashin mashin_1, Mashin mashin_2) {
+        System.out.println("Sort");
         return mashin_1.getMark().compareTo(mashin_2.getMark());
     }
 }

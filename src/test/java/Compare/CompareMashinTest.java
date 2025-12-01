@@ -34,14 +34,13 @@ public class CompareMashinTest {
         mashins.add(bmw_3);
         mashins.add(bmw_4);
 
-        Collections.sort(mashins);
+        Collections.sort(mashins); //Default : Comparable and CompareTo Method
 
         List<Mashin> expectedMashins = new ArrayList<>();
         expectedMashins.add(new Mashin("BMW",50, Dande.AUTOMATIC));
         expectedMashins.add(new Mashin("BMW",50, Dande.MANUAL));
         expectedMashins.add(new Mashin("BMW",100, Dande.AUTOMATIC));
         expectedMashins.add(new Mashin("BMW",150, Dande.MANUAL));
-
 
         Assertions.assertThat(mashins).isEqualTo(expectedMashins);
 
@@ -59,7 +58,7 @@ public class CompareMashinTest {
         mashins.add(pride);
         mashins.add(alfaRomeo);
 
-        Collections.sort(mashins, new MashinCamparator());
+        Collections.sort(mashins, new MashinCamparator()); // Class : Comparator and Compare Method
 
         List<Mashin> expectedMashins = new ArrayList<>();
         expectedMashins.add(alfaRomeo);
